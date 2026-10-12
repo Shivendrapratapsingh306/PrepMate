@@ -1,0 +1,15 @@
+{
+  "name": "prepmate-integrated",
+  "private": true,
+  "type": "module",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "npx vercel dev --listen 3000",
+    "start": "npx serve . -l 3000",
+    "preview": "npx serve . -l 4173"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "vercel": "^41.1.0"
+  }
+}
