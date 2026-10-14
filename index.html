@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -300,41 +301,304 @@ button,.btn,input,textarea,select{font-family:'Inter',Arial,sans-serif}
 }
 </style>
 </head>
+
 <body>
-<a class="skip-link" href="#mainContent">Skip to main content</a>
-<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><symbol id="prepmate-mark" viewBox="0 0 64 64"><path d="M10 48C21 48 20 16 34 16c8 0 9 12 20 12" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><circle cx="10" cy="48" r="5" fill="#c49a55"/><circle cx="54" cy="28" r="5" fill="currentColor"/></symbol></defs></svg>
-<div class="grain" aria-hidden="true"></div>
-<div class="splash" id="brandSplash" aria-hidden="true"><div><svg class="splash-logo" viewBox="0 0 64 64"><use href="#prepmate-mark"></use></svg><div class="splash-word">PrepMate</div></div></div>
-<section class="landing" id="landingScreen" aria-label="PrepMate introduction">
- <header class="landing-nav">
-  <a class="landing-lockup" href="#landingHero" aria-label="PrepMate home"><span class="brand-mark"><svg viewBox="0 0 64 64"><use href="#prepmate-mark"></use></svg></span><strong>PrepMate</strong></a>
-  <nav class="landing-links" aria-label="Landing page"><a href="#pillars">Why PrepMate</a><a href="#how-it-works">How it works</a><a href="#proof">Proof</a><a href="#case-study-link">Case study</a></nav>
-  <button class="btn btn-secondary" type="button" onclick="showAuthPanel('login')">Sign in</button>
- </header>
- <main class="landing-main">
-  <section class="landing-hero" id="landingHero">
-   <div>
-    <div class="landing-kicker">Placement readiness, without the noise</div>
-    <h1>Calm confidence for your <em>next interview.</em></h1>
-    <p>Practice with purpose. Get focused feedback. Build readiness you can feel — one clear answer at a time.</p>
-    <div class="landing-actions"><button class="btn btn-primary" type="button" onclick="showAuthPanel('register')">Start preparing</button><a class="btn btn-secondary" href="#how-it-works">See how it works</a></div>
-    <div id="case-study-link" style="margin-top:12px"><button class="btn btn-secondary" type="button" onclick="navigate('case-study')">View product case study →</button></div>
-    <div class="hero-note"><i></i><span>Built for focused practice, not endless preparation.</span></div>
-   </div>
-   <div class="product-stage" aria-label="PrepMate readiness preview">
-    <div class="product-glow"></div>
-    <div class="product-card">
-     <div class="product-top"><strong>PrepMate / Readiness</strong><span>ON TRACK</span></div>
-     <div class="product-score"><div class="product-ring"><div><b>76</b><small>READINESS</small></div></div><div class="product-lines"><div class="product-line"><i style="width:82%"></i></div><div class="product-line"><i></i></div><div class="product-line"><i></i></div><div class="product-caption">Your strongest next move: practice clearer, more measurable answers.</div></div></div>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+    <defs>
+      <symbol id="prepmate-mark" viewBox="0 0 64 64">
+        <path d="M10 48C21 48 20 16 34 16c8 0 9 12 20 12" fill="none" stroke="currentColor" stroke-width="7"
+          stroke-linecap="round" />
+        <circle cx="10" cy="48" r="5" fill="#c49a55" />
+        <circle cx="54" cy="28" r="5" fill="currentColor" />
+      </symbol>
+    </defs>
+  </svg>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="splash" id="brandSplash" aria-hidden="true">
+    <div><svg class="splash-logo" viewBox="0 0 64 64">
+        <use href="#prepmate-mark"></use>
+      </svg>
+      <div class="splash-word">PrepMate</div>
     </div>
-   </div>
+  </div>
+  <section class="landing" id="landingScreen" aria-label="PrepMate introduction">
+    <header class="landing-nav">
+      <a class="landing-lockup" href="#landingHero" aria-label="PrepMate home"><span class="brand-mark"><svg
+            viewBox="0 0 64 64">
+            <use href="#prepmate-mark"></use>
+          </svg></span><strong>PrepMate</strong></a>
+      <nav class="landing-links" aria-label="Landing page"><a href="#pillars">Why PrepMate</a><a
+          href="#how-it-works">How it works</a><a href="#proof">Proof</a><a href="#case-study-link">Case study</a></nav>
+      <div class="landing-nav-auth" style="display:flex;align-items:center;gap:10px">
+        <button class="btn btn-secondary" type="button" onclick="showSignInPage()">Sign in</button>
+        <button class="btn btn-primary" type="button" onclick="showRegisterPage()">Register</button>
+      </div>
+    </header>
+    <main class="landing-main">
+      <section class="landing-hero" id="landingHero">
+        <div>
+          <div class="landing-kicker">Placement readiness, without the noise</div>
+          <h1>Calm confidence for your <em>next interview.</em></h1>
+          <p>Practice with purpose. Get focused feedback. Build readiness you can feel — one clear answer at a time.</p>
+          <div class="landing-actions"><button class="btn btn-primary" type="button" onclick="showRegisterPage()">Start
+              preparing</button><button class="btn btn-secondary" type="button" onclick="showSignInPage()">Sign
+              in</button><a class="btn btn-secondary" href="#how-it-works">See how it works</a></div>
+          <div id="case-study-link" style="margin-top:12px"><button class="btn btn-secondary" type="button"
+              onclick="navigate('case-study')">View product case study →</button></div>
+          <div class="hero-note"><i></i><span>Built for focused practice, not endless preparation.</span></div>
+        </div>
+        <div class="product-stage" aria-label="PrepMate readiness preview">
+          <div class="product-glow"></div>
+          <div class="product-card">
+            <div class="product-top"><strong>PrepMate / Readiness</strong><span>ON TRACK</span></div>
+            <div class="product-score">
+              <div class="product-ring">
+                <div><b>76</b><small>READINESS</small></div>
+              </div>
+              <div class="product-lines">
+                <div class="product-line"><i style="width:82%"></i></div>
+                <div class="product-line"><i></i></div>
+                <div class="product-line"><i></i></div>
+                <div class="product-caption">Your strongest next move: practice clearer, more measurable answers.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section" id="pillars">
+        <div class="section-kicker">The PrepMate method</div>
+        <h2>Three things that make practice count.</h2>
+        <p class="section-intro">A quieter way to prepare: rehearse the moments that matter, understand what to change,
+          and watch the signal improve.</p>
+        <div class="pillars">
+          <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round">
+              <path d="M8 22V10m0 12 7-7 5 4 5-8" />
+              <path d="M20 7h5v5" />
+            </svg>
+            <h3>Practice</h3>
+            <p>Role-aware mock interviews that help you build calm, structured answers under pressure.</p>
+          </article>
+          <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round">
+              <path d="M7 9h18v14H7z" />
+              <path d="m10 18 3-3 3 2 5-5" />
+              <path d="M11 26h10" />
+            </svg>
+            <h3>Feedback</h3>
+            <p>Focused signals on answer quality, communication and presentation — without the noise.</p>
+          </article>
+          <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round">
+              <path d="M6 24V8m0 16h20" />
+              <path d="m10 20 5-6 4 3 6-8" />
+            </svg>
+            <h3>Progress</h3>
+            <p>A simple readiness story that makes improvement visible and gives you a clear next action.</p>
+          </article>
+        </div>
+      </section>
+      <section class="landing-section alt" id="how-it-works">
+        <div class="section-kicker">How it works</div>
+        <h2>Small sessions. Better signals.</h2>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">01</div>
+            <h3>Set your context</h3>
+            <p>Choose your target role and keep your profile current.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <h3>Practice the moment</h3>
+            <p>Answer realistic prompts with a focused timer and guidance.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <h3>Leave with a next move</h3>
+            <p>Use the feedback and readiness trend to decide what to practice next.</p>
+          </article>
+        </div>
+      </section>
+      <section class="landing-section" id="proof">
+        <div class="pm-testimonial-carousel" data-testimonial-carousel aria-label="Candidate testimonials">
+          <div class="pm-testimonial-track">
+            <article class="pm-testimonial-card is-active" data-slide="0">
+              <div class="pm-testimonial-photo-frame" aria-hidden="true"><img class="pm-testimonial-photo"
+                  src="/testimonial-1.jpg" alt="" loading="lazy" decoding="async"></div>
+              <div class="pm-testimonial-copy">
+                <div class="pm-testimonial-kicker">Candidate perspective · 01</div>
+                <blockquote class="pm-testimonial-quote">“Building stronger interview answers through deliberate
+                  practice.”</blockquote>
+                <div class="pm-testimonial-identity"><strong class="pm-testimonial-name">Shivendra Pratap
+                    Singh</strong><span class="pm-testimonial-role">B.Tech (Hons) · CSE · 3rd Year</span></div>
+                <div class="pm-testimonial-caption">Interview preparation · Technical + behavioral</div>
+              </div>
+            </article>
+            <article class="pm-testimonial-card" data-slide="1" hidden>
+              <div class="pm-testimonial-photo-frame" aria-hidden="true"><img class="pm-testimonial-photo"
+                  src="/testimonial-2.jpg" alt="" loading="lazy" decoding="async"></div>
+              <div class="pm-testimonial-copy">
+                <div class="pm-testimonial-kicker">Candidate perspective · 02</div>
+                <blockquote class="pm-testimonial-quote">“Turning technical project work into clear, confident interview
+                  stories.”</blockquote>
+                <div class="pm-testimonial-identity"><strong class="pm-testimonial-name">Shivansh Tiwari</strong><span
+                    class="pm-testimonial-role">B.Tech (Hons) · CSE · 3rd Year</span></div>
+                <div class="pm-testimonial-caption">Project storytelling · Technical communication</div>
+              </div>
+            </article>
+            <article class="pm-testimonial-card" data-slide="2" hidden>
+              <div class="pm-testimonial-photo-frame" aria-hidden="true"><img class="pm-testimonial-photo"
+                  src="/testimonial-3.jpg" alt="" loading="lazy" decoding="async"></div>
+              <div class="pm-testimonial-copy">
+                <div class="pm-testimonial-kicker">Candidate perspective · 03</div>
+                <blockquote class="pm-testimonial-quote">“Making technical work easier to explain with clarity,
+                  structure, and confidence.”</blockquote>
+                <div class="pm-testimonial-identity"><strong class="pm-testimonial-name">Sanvi</strong><span
+                    class="pm-testimonial-role">B.Tech (Hons) · CSE · 3rd Year</span></div>
+                <div class="pm-testimonial-caption">Communication · Readiness building</div>
+              </div>
+            </article>
+          </div>
+          <div class="pm-testimonial-controls">
+            <div class="pm-testimonial-dots" aria-label="Choose testimonial"><button class="pm-testimonial-dot"
+                type="button" data-testimonial-dot="0" aria-label="Show testimonial 1"
+                aria-current="true"></button><button class="pm-testimonial-dot" type="button" data-testimonial-dot="1"
+                aria-label="Show testimonial 2" aria-current="false"></button><button class="pm-testimonial-dot"
+                type="button" data-testimonial-dot="2" aria-label="Show testimonial 3" aria-current="false"></button>
+            </div>
+            <div class="pm-testimonial-arrows"><button class="pm-testimonial-arrow" type="button" data-direction="prev"
+                data-testimonial-prev aria-label="Previous testimonial"><span class="pm-arrow-glyph"
+                  aria-hidden="true">←</span></button><button class="pm-testimonial-arrow" type="button"
+                data-direction="next" data-testimonial-next aria-label="Next testimonial"><span class="pm-arrow-glyph"
+                  aria-hidden="true">→</span></button></div>
+          </div>
+          <div class="pm-testimonial-progress" aria-hidden="true"><i></i></div>
+          <div class="pm-testimonial-note">Candidate portraits are provided demo assets for this prototype. Replace with
+            verified testimonials and approved photography before public launch.</div>
+        </div>
+      </section>
+      <section class="landing-section" style="padding-top:10px">
+        <div class="closing">
+          <div>
+            <div class="section-kicker" style="color:#d8d4ff">Your next interview deserves a clear plan.</div>
+            <h2>Practice with purpose. Walk in prepared.</h2>
+          </div><button class="btn btn-secondary" type="button" onclick="showRegisterPage()">Start preparing</button>
+        </div>
+        <footer class="landing-footer"><a class="landing-lockup" href="#landingHero"><span class="brand-mark"><svg
+                viewBox="0 0 64 64">
+                <use href="#prepmate-mark"></use>
+              </svg></span><strong>PrepMate</strong></a><span>Calm confidence for your next interview.</span>
+          <div class="footer-legal"><a href="#legal"
+              onclick="showToast('Privacy page to be finalized before launch');return false">Privacy</a><a href="#legal"
+              onclick="showToast('Terms page to be finalized before launch');return false">Terms</a><a href="#legal"
+              onclick="showToast('Accessibility statement to be finalized before launch');return false">Accessibility
+              Statement</a><a href="#legal"
+              onclick="showToast('Contact page to be finalized before launch');return false">Contact</a><small>Legal
+              pages to be finalized before launch.</small></div>
+        </footer>
+      </section>
+    </main>
   </section>
-  <section class="landing-section" id="pillars"><div class="section-kicker">The PrepMate method</div><h2>Three things that make practice count.</h2><p class="section-intro">A quieter way to prepare: rehearse the moments that matter, understand what to change, and watch the signal improve.</p>
-   <div class="pillars">
-    <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 22V10m0 12 7-7 5 4 5-8"/><path d="M20 7h5v5"/></svg><h3>Practice</h3><p>Role-aware mock interviews that help you build calm, structured answers under pressure.</p></article>
-    <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 9h18v14H7z"/><path d="m10 18 3-3 3 2 5-5"/><path d="M11 26h10"/></svg><h3>Feedback</h3><p>Focused signals on answer quality, communication and presentation — without the noise.</p></article>
-    <article class="pillar"><svg class="line-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 24V8m0 16h20"/><path d="m10 20 5-6 4 3 6-8"/></svg><h3>Progress</h3><p>A simple readiness story that makes improvement visible and gives you a clear next action.</p></article>
-   </div>
+
+  <!-- ================= DEDICATED SIGN IN PAGE ================= -->
+  <section id="signInScreen" class="auth-fullscreen-page" aria-label="Sign In to PrepMate">
+    <header class="auth-page-header">
+      <button class="auth-back-link" type="button" onclick="showLandingPage()" aria-label="Back to home">
+        <span>←</span> Back to PrepMate
+      </button>
+      <a class="landing-lockup" href="#landingHero" onclick="showLandingPage();return false">
+        <span class="brand-mark"><svg viewBox="0 0 64 64">
+            <use href="#prepmate-mark"></use>
+          </svg></span>
+        <strong>PrepMate</strong>
+      </a>
+      <div class="auth-header-switch">
+        <span>Don't have an account?</span>
+        <button class="btn btn-secondary" type="button" style="padding:7px 13px;font-size:12px"
+          onclick="showRegisterPage()">Register</button>
+      </div>
+    </header>
+    <main class="auth-page-main">
+      <div class="auth-wrapper">
+        <div class="auth-showcase">
+          <div class="auth-showcase-badge">PrepMate Workspace</div>
+          <h2>Calm confidence for your next interview.</h2>
+          <p>Sign in to access your saved mock interviews, adaptive follow-ups, and personalized readiness analytics.
+          </p>
+          <div class="auth-features-list">
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">🎯</div>
+              <div>
+                <strong>Five-dimension evaluation</strong>
+                <span>Instant feedback on clarity, structure, relevance, impact & ownership.</span>
+              </div>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">✦</div>
+              <div>
+                <strong>Multimodal presentation check</strong>
+                <span>Camera framing, lighting checks, audio levels & eye-line guidance.</span>
+              </div>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">📊</div>
+              <div>
+                <strong>Readiness story & coaching</strong>
+                <span>Track progress across sessions with targeted practice plans.</span>
+              </div>
+            </div>
+          </div>
+          <div class="auth-quote-card">
+            “PrepMate turned nervous technical interviews into structured, confident conversations.”
+          </div>
+        </div>
+        <div class="auth-form-card">
+          <div class="auth-card-header">
+            <h1>Sign in</h1>
+            <p>Choose your workspace role and enter your credentials.</p>
+          </div>
+          <div class="auth-role-tabs">
+            <button id="signInStudentTab" type="button" class="auth-role-tab active"
+              onclick="selectSignInRole('student')">Student</button>
+            <button id="signInTrainerTab" type="button" class="auth-role-tab"
+              onclick="selectSignInRole('trainer')">Trainer</button>
+          </div>
+          <div id="signInError" class="auth-error-banner" style="display:none"></div>
+          <form onsubmit="event.preventDefault();submitSignInForm()">
+            <div class="auth-field">
+              <label for="signInLoginId">Login ID or Email <span class="req">*</span></label>
+              <input id="signInLoginId" type="text" placeholder="e.g. shivendra.singh or email@example.com"
+                autocomplete="username" required>
+            </div>
+            <div class="auth-field">
+              <label for="signInPassword">Password <span class="req">*</span></label>
+              <div class="auth-password-wrap">
+                <input id="signInPassword" type="password" placeholder="Enter your password"
+                  autocomplete="current-password" required>
+                <button id="signInPasswordToggle" type="button" class="auth-password-toggle"
+                  aria-label="Toggle password visibility" onclick="toggleSignInPassword()">◉</button>
+              </div>
+            </div>
+            <div class="auth-checkbox-row">
+              <label class="auth-checkbox-label">
+                <input type="checkbox" id="signInRemember" checked>
+                <span>Remember me on this device</span>
+              </label>
+              <a href="javascript:void(0)"
+                onclick="showToast('Password reset assistance: contact your college trainer or admin.')"
+                style="color:var(--muted);text-decoration:underline">Forgot password?</a>
+            </div>
+            <button id="signInSubmitBtn" type="submit" class="btn btn-primary auth-submit-btn">Sign in to PrepMate
+              →</button>
+          </form>
+          <div class="auth-card-footer">
+            Don't have an account yet? <a href="javascript:void(0)" onclick="showRegisterPage()">Create an account /
+              Register →</a>
+          </div>
+        </div>
+      </div>
+    </main>
   </section>
   <section class="landing-section alt" id="how-it-works"><div class="section-kicker">How it works</div><h2>Small sessions. Better signals.</h2><div class="steps"><article class="step"><div class="step-num">01</div><h3>Set your context</h3><p>Choose your target role and keep your profile current.</p></article><article class="step"><div class="step-num">02</div><h3>Practice the moment</h3><p>Answer realistic prompts with a focused timer and guidance.</p></article><article class="step"><div class="step-num">03</div><h3>Leave with a next move</h3><p>Use the feedback and readiness trend to decide what to practice next.</p></article></div></section>
   <section class="landing-section" id="proof">
@@ -361,64 +625,814 @@ button,.btn,input,textarea,select{font-family:'Inter',Arial,sans-serif}
     <div class="pm-testimonial-note">Candidate portraits are provided demo assets for this prototype. Replace with verified testimonials and approved photography before public launch.</div>
    </div>
   </section>
-  <section class="landing-section" style="padding-top:10px"><div class="closing"><div><div class="section-kicker" style="color:#d8d4ff">Your next interview deserves a clear plan.</div><h2>Practice with purpose. Walk in prepared.</h2></div><button class="btn btn-secondary" type="button" onclick="showAuthPanel('register')">Start preparing</button></div><footer class="landing-footer"><a class="landing-lockup" href="#landingHero"><span class="brand-mark"><svg viewBox="0 0 64 64"><use href="#prepmate-mark"></use></svg></span><strong>PrepMate</strong></a><span>Calm confidence for your next interview.</span><div class="footer-legal"><a href="#legal" onclick="showToast('Privacy page to be finalized before launch');return false">Privacy</a><a href="#legal" onclick="showToast('Terms page to be finalized before launch');return false">Terms</a><a href="#legal" onclick="showToast('Accessibility statement to be finalized before launch');return false">Accessibility Statement</a><a href="#legal" onclick="showToast('Contact page to be finalized before launch');return false">Contact</a><small>Legal pages to be finalized before launch.</small></div></footer></section>
- </main>
-</section>
-<div id="loginScreen" style="position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:20px;overflow:auto">
- <div class="card" style="width:min(500px,100%);padding:30px">
-  <div style="text-align:center;margin-bottom:20px"><div class="brand" style="justify-content:center;padding:0 0 14px"><div class="brand-mark"><svg viewBox="0 0 64 64"><use href="#prepmate-mark"></use></svg></div><div><strong>PrepMate</strong><small>Calm confidence for your next interview.</small></div></div><h1 id="authTitle" style="margin:4px 0 6px;font-size:26px">Welcome back</h1><p class="muted" id="authSubtitle">Login to continue your placement journey.</p></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px"><button id="studentTab" class="btn btn-primary" onclick="selectAuthRole('student')">Student</button><button id="trainerTab" class="btn btn-secondary" onclick="selectAuthRole('trainer')">Trainer</button></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px"><button id="loginModeTab" class="btn btn-soft" onclick="setAuthMode('login')">Login</button><button id="registerModeTab" class="btn btn-secondary" onclick="setAuthMode('register')">Create account</button></div>
-  <div id="profileFields" style="display:none;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:13px">
-   <div><label class="muted">Full name</label><input id="registerName" style="width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)" placeholder="Your name" autocomplete="name"></div>
-   <div><label class="muted" id="profileLabel">College</label><input id="registerProfile" style="width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)" placeholder="College / organization"></div>
+
+  <!-- Legacy hidden modal stub for backwards compatibility -->
+  <div id="loginScreen" style="display:none!important" aria-hidden="true">
+    <input id="loginId" type="hidden">
+    <input id="loginPassword" type="hidden">
+    <input id="registerName" type="hidden">
+    <input id="registerProfile" type="hidden">
+    <div id="loginError" style="display:none"></div>
+    <button id="authButton" type="button" style="display:none"></button>
+    <div id="studentTab"></div>
+    <div id="trainerTab"></div>
+    <div id="loginModeTab"></div>
+    <div id="registerModeTab"></div>
+    <div id="profileFields"></div>
+    <div id="profileLabel"></div>
+    <div id="authTitle"></div>
+    <div id="authSubtitle"></div>
+    <div id="fingerprintButton"></div>
   </div>
-  <label class="muted">Login ID</label><input id="loginId" style="width:100%;margin:6px 0 13px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)" placeholder="Create a login ID" autocomplete="username">
-  <label class="muted">Password</label><div style="position:relative;margin:6px 0 16px"><input id="loginPassword" type="password" style="width:100%;padding:12px 44px 12px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)" placeholder="Enter password" autocomplete="current-password"><button type="button" id="passwordToggle" aria-label="Show password" onclick="togglePassword()" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:8px;background:transparent;color:var(--muted);font-size:16px;padding:0">◉</button></div>
-  <button id="authButton" class="btn btn-primary" style="width:100%" onclick="submitAuth()">Sign in to PrepMate →</button>
-  <div style="margin-top:12px;padding:13px;border:1px solid color-mix(in srgb,var(--primary) 35%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--primary) 7%,var(--surface));display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;flex:none;border-radius:11px;background:color-mix(in srgb,var(--primary) 14%,transparent);display:grid;place-items:center;color:var(--primary);font-size:21px">♆</div><div style="flex:1;text-align:left"><strong style="display:block;font-size:12px">Biometric sign-in</strong><span class="muted">Login with password <b>or</b> use fingerprint / Windows Hello</span></div><button id="fingerprintButton" type="button" class="btn btn-primary" style="padding:9px 12px;white-space:nowrap" onclick="useFingerprint()">Use biometric</button></div>
-  <div id="loginError" style="display:none;margin-top:12px;padding:10px;border-radius:9px;background:#fee4e2;color:#b42318;font-size:11px"></div>
- </div>
-</div>
-<div class="app-root" id="app">
-<div class="layout">
-<aside class="sidebar" aria-label="Primary navigation">
-  <div class="brand"><div class="brand-mark"><svg viewBox="0 0 64 64"><use href="#prepmate-mark"></use></svg></div><div><strong>PrepMate</strong><small>Calm confidence for your next interview.</small></div></div>
-  <nav class="nav" aria-label="PrepMate sections">
-    <div class="nav-section">Workspace</div>
-    <button class="active" data-view="dashboard"><span class="icon">⌂</span><span>Dashboard</span></button>
-    <button data-view="interview"><span class="icon">◉</span><span>AI Interview</span></button>
-    <button data-view="grooming"><span class="icon">✦</span><span>Grooming Coach</span></button>
-    <button data-view="progress"><span class="icon">↗</span><span>Progress</span></button>
-    <div class="nav-section">Resources</div>
-    <button data-view="resume"><span class="icon">▤</span><span>Resume Profile</span></button>
-    <button data-view="settings"><span class="icon">⚙</span><span>Settings</span></button>
-    <button data-view="case-study"><span class="icon">▦</span><span>Product Case Study</span></button>
-  </nav>
-  <div class="sidebar-bottom"><div class="mini-card"><p>Readiness target</p><strong>85 / 100</strong><div class="progress" style="margin-top:8px"><i style="width:76%"></i></div><p style="margin-top:8px">9 points to your next milestone</p></div></div>
-</aside>
-<main class="main" id="mainContent" tabindex="-1">
-<header class="topbar"><div class="crumb" id="crumb"><span>Workspace</span><strong> / Overview</strong></div><div class="top-actions"><span id="backendStatus" class="tag-warn">Backend connecting…</span><button class="circle-btn" aria-label="View notifications" onclick="showToast('No new notifications')">♢</button><div class="avatar" aria-label="Signed-in profile">SH</div><button id="signOutBtn" class="btn btn-secondary" style="display:inline-flex;align-items:center;white-space:nowrap;flex-shrink:0" onclick="signOut()">Sign out</button></div></header>
-<div class="content">
-<section class="view active" id="dashboard">
-  <div class="prototype-banner" role="note"><span class="prototype-mark" aria-hidden="true"></span><div><strong>Prototype data.</strong> Readiness scores, session counts and trend values shown here are illustrative placeholders for the competition prototype. Replace them with measured user data before launch.</div></div>
-  <div class="hero"><div><div class="eyebrow">Good evening, Shiv</div><h1>Your interview readiness, at a glance.</h1><p>Practice smarter with profile-based interviews, communication analytics and professional presentation coaching.</p></div><div class="actions"><button class="btn btn-secondary" onclick="navigate('resume')">Update profile</button><button class="btn btn-primary" onclick="startInterview()">Start mock interview →</button></div></div>
-  <div class="grid stats">
-    <div class="stat"><div class="stat-top"><span class="stat-label">Overall readiness</span><span class="tag-success">+6%</span></div><div class="stat-value">76<span style="font-size:14px;color:var(--muted)">/100</span></div><div class="delta up">↑ 6 pts vs last week</div><svg class="sparkline" viewBox="0 0 120 28" aria-hidden="true"><polyline points="2,22 20,20 38,21 56,15 74,17 92,10 118,7"/></svg></div>
-    <div class="stat"><div class="stat-top"><span class="stat-label">Interviews completed</span><span>◷</span></div><div class="stat-value">12</div><div class="delta neutral">3 this week</div><svg class="sparkline spark-muted" viewBox="0 0 120 28" aria-hidden="true"><polyline points="2,21 20,21 38,18 56,18 74,13 92,15 118,9"/></svg></div>
-    <div class="stat"><div class="stat-top"><span class="stat-label">Communication</span><span class="tag-warn">Focus</span></div><div class="stat-value">71</div><div class="delta up">↑ 4 pts this week</div><svg class="sparkline" viewBox="0 0 120 28" aria-hidden="true"><polyline points="2,22 20,19 38,20 56,18 74,16 92,12 118,10"/></svg></div>
-    <div class="stat"><div class="stat-top"><span class="stat-label">Profile match</span><span>✓</span></div><div class="stat-value">92%</div><div class="delta up">Resume is interview-ready</div><svg class="sparkline" viewBox="0 0 120 28" aria-hidden="true"><polyline points="2,19 20,18 38,16 56,15 74,12 92,11 118,6"/></svg></div>
+  <div class="app-root" id="app">
+    <div class="layout">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="brand-mark"><svg viewBox="0 0 64 64">
+              <use href="#prepmate-mark"></use>
+            </svg></div>
+          <div><strong>PrepMate</strong><small>Calm confidence for your next interview.</small></div>
+        </div>
+        <nav class="nav" aria-label="PrepMate sections">
+          <div class="nav-section">Workspace</div>
+          <button class="active" data-view="dashboard"><span class="icon">⌂</span><span>Dashboard</span></button>
+          <button data-view="interview"><span class="icon">◉</span><span>AI Interview</span></button>
+          <button data-view="grooming"><span class="icon">✦</span><span>Grooming Coach</span></button>
+          <button data-view="progress"><span class="icon">↗</span><span>Progress</span></button>
+          <div class="nav-section">Resources</div>
+          <button data-view="resume"><span class="icon">▤</span><span>Resume Profile</span></button>
+          <button data-view="settings"><span class="icon">⚙</span><span>Settings</span></button>
+          <button data-view="case-study"><span class="icon">▦</span><span>Product Case Study</span></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="mini-card">
+            <p>Readiness target</p><strong>85 / 100</strong>
+            <div class="progress" style="margin-top:8px"><i style="width:76%"></i></div>
+            <p style="margin-top:8px">9 points to your next milestone</p>
+          </div>
+        </div>
+      </aside>
+      <main class="main" id="mainContent" tabindex="-1">
+        <header class="topbar">
+          <div class="crumb" id="crumb"><span>Workspace</span><strong> / Overview</strong></div>
+          <div class="top-actions"><span id="backendStatus" class="tag-warn">Backend connecting…</span><button
+              class="circle-btn" aria-label="View notifications" onclick="showToast('No new notifications')">♢</button>
+            <div class="avatar" aria-label="Signed-in profile">SH</div><button id="signOutBtn" class="btn btn-secondary"
+              style="display:inline-flex;align-items:center;white-space:nowrap;flex-shrink:0" onclick="signOut()">Sign
+              out</button>
+          </div>
+        </header>
+        <div class="content">
+          <section class="view active" id="dashboard">
+            <div class="prototype-banner" role="note"><span class="prototype-mark" aria-hidden="true"></span>
+              <div><strong>Prototype data.</strong> Readiness scores, session counts and trend values shown here are
+                illustrative placeholders for the competition prototype. Replace them with measured user data before
+                launch.</div>
+            </div>
+            <div class="hero">
+              <div>
+                <div class="eyebrow">Good evening, Shiv</div>
+                <h1>Your interview readiness, at a glance.</h1>
+                <p>Practice smarter with profile-based interviews, communication analytics and professional presentation
+                  coaching.</p>
+              </div>
+              <div class="actions"><button class="btn btn-secondary" onclick="navigate('resume')">Update
+                  profile</button><button class="btn btn-primary" onclick="startInterview()">Start mock interview
+                  →</button></div>
+            </div>
+            <div class="grid stats">
+              <div class="stat">
+                <div class="stat-top"><span class="stat-label">Overall readiness</span><span
+                    class="tag-success">+6%</span></div>
+                <div class="stat-value">76<span style="font-size:14px;color:var(--muted)">/100</span></div>
+                <div class="delta up">↑ 6 pts vs last week</div><svg class="sparkline" viewBox="0 0 120 28"
+                  aria-hidden="true">
+                  <polyline points="2,22 20,20 38,21 56,15 74,17 92,10 118,7" />
+                </svg>
+              </div>
+              <div class="stat">
+                <div class="stat-top"><span class="stat-label">Interviews completed</span><span>◷</span></div>
+                <div class="stat-value">12</div>
+                <div class="delta neutral">3 this week</div><svg class="sparkline spark-muted" viewBox="0 0 120 28"
+                  aria-hidden="true">
+                  <polyline points="2,21 20,21 38,18 56,18 74,13 92,15 118,9" />
+                </svg>
+              </div>
+              <div class="stat">
+                <div class="stat-top"><span class="stat-label">Communication</span><span class="tag-warn">Focus</span>
+                </div>
+                <div class="stat-value">71</div>
+                <div class="delta up">↑ 4 pts this week</div><svg class="sparkline" viewBox="0 0 120 28"
+                  aria-hidden="true">
+                  <polyline points="2,22 20,19 38,20 56,18 74,16 92,12 118,10" />
+                </svg>
+              </div>
+              <div class="stat">
+                <div class="stat-top"><span class="stat-label">Profile match</span><span>✓</span></div>
+                <div class="stat-value">92%</div>
+                <div class="delta up">Resume is interview-ready</div><svg class="sparkline" viewBox="0 0 120 28"
+                  aria-hidden="true">
+                  <polyline points="2,19 20,18 38,16 56,15 74,12 92,11 118,6" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid cols-2 dashboard-lead">
+              <div class="card readiness-hero">
+                <div class="card-head">
+                  <div>
+                    <div class="card-title">Readiness score</div>
+                    <div class="muted">Your latest multimodal assessment</div>
+                  </div><button class="btn btn-soft" onclick="navigate('progress')">View details</button>
+                </div>
+                <div class="score-layout">
+                  <div class="ring" data-score="76" aria-label="Readiness score 76 out of 100">
+                    <span>76</span><small>READINESS</small>
+                  </div>
+                  <div class="score-copy">
+                    <div class="score-kicker">ON TRACK</div>
+                    <h3>Strong foundation</h3>
+                    <p>You’re strong on role knowledge and presentation. The fastest gains now come from clearer answers
+                      and steadier speech.</p>
+                    <div class="chips"><span class="chip">Technical 82</span><span class="chip">Answer 79</span><span
+                        class="chip">Speech 73</span><span class="chip">Presentation 81</span></div><button
+                      class="btn btn-primary score-next" onclick="startInterview()">Next best action&nbsp; ·
+                      &nbsp;practice communication</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-head">
+                  <div>
+                    <div class="card-title">This week's focus</div>
+                    <div class="muted">Recommended by your coach</div>
+                  </div><span>✦</span>
+                </div>
+                <div class="list">
+                  <div class="list-row">
+                    <div class="dot"></div>
+                    <div><strong>Reduce filler words</strong><small>Target: &lt; 3 per minute</small></div>
+                    <div class="row-right"><span class="score-pill">High impact</span></div>
+                  </div>
+                  <div class="list-row">
+                    <div class="dot"></div>
+                    <div><strong>Structure behavioral answers</strong><small>Use the STAR framework</small></div>
+                    <div class="row-right"><span class="score-pill">Practice</span></div>
+                  </div>
+                  <div class="list-row">
+                    <div class="dot"></div>
+                    <div><strong>Camera eye-line</strong><small>Keep gaze near the lens</small></div>
+                    <div class="row-right"><span class="score-pill">Quick win</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div style="height:16px"></div>
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <div class="card-title">Progress over time</div>
+                <div class="muted">Overall score by session</div>
+              </div><span class="tag-success">+14 pts</span>
+            </div>
+            <div class="chart">
+              <div class="bars">
+                <div class="bar-group">
+                  <div class="bar" style="height:61%"></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar" style="height:66%"></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar" style="height:69%"></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar" style="height:72%"></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar" style="height:76%"></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar" style="height:82%"></div>
+                </div>
+              </div>
+              <div class="labels">
+                <span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <div class="card-title">Latest session</div>
+                <div class="muted">Software Engineer · Behavioral</div>
+              </div><span class="tag-success">76 / 100</span>
+            </div>
+            <div class="list">
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>“Tell me about a difficult project.”</strong><small>Answer quality · 84</small></div>
+              </div>
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>“Why should we hire you?”</strong><small>Answer quality · 77</small></div>
+              </div>
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>“Tell me about a conflict.”</strong><small>Answer quality · 70</small></div>
+              </div>
+            </div><button class="btn btn-secondary" style="width:100%;margin-top:12px"
+              onclick="navigate('interview')">Continue practicing</button>
+          </div>
+        </div>
+        <div style="height:16px"></div>
+        <div class="quick"><button onclick="startInterview()"><span>◉</span><b>AI Mock Interview</b><span>Adaptive
+              questions from your profile</span></button><button
+            onclick="navigate('grooming')"><span>✦</span><b>Grooming Coach</b><span>Camera, posture &
+              presentation</span></button><button onclick="navigate('resume')"><span>▤</span><b>Resume
+              Profile</b><span>Keep your AI context fresh</span></button><button
+            onclick="generatePracticePlan()"><span>✓</span><b>Daily practice</b><span>12 minutes ·
+              Communication</span></button></div>
+        <div class="pm-plan-grid pm-structure-card">
+          <article class="card">
+            <div class="pm-structure-head">
+              <div><span class="pm-eyebrow">Today’s plan</span>
+                <h2>25 minutes of focused practice</h2>
+                <p>Three small steps, ordered around your current communication focus.</p>
+              </div><span class="tag-success">25 min</span>
+            </div>
+            <ol class="pm-plan-list">
+              <li><span>1</span><span><strong>Warm up your introduction</strong><small>Build a clear 60-second
+                    answer.</small></span><time>5 min</time></li>
+              <li><span>2</span><span><strong>Explain your final-year project</strong><small>Use problem, decision, and
+                    result.</small></span><time>12 min</time></li>
+              <li><span>3</span><span><strong>Review communication feedback</strong><small>Focus on pace and
+                    concision.</small></span><time>8 min</time></li>
+            </ol>
+            <div class="actions" style="margin-top:14px"><button class="btn btn-primary"
+                onclick="startInterview()">Start practice →</button><button class="btn btn-secondary"
+                onclick="showToast('Practice plan kept for today')">Keep plan</button></div>
+          </article>
+          <article class="card">
+            <div class="pm-structure-head">
+              <div><span class="pm-eyebrow">Current focus</span>
+                <h2>Give your ideas more room to land.</h2>
+              </div>
+            </div>
+            <div class="pm-focus-box"><strong>Speech fluency · 73</strong>
+              <p>Slow slightly at transitions and replace filler words with short pauses so strong technical ideas feel
+                more deliberate.</p><button class="btn btn-soft" onclick="navigate('progress')">View progress →</button>
+            </div>
+          </article>
+        </div>
+        </section>
+
+        <section class="view" id="resume">
+          <div class="hero">
+            <div>
+              <div class="eyebrow">Candidate profile</div>
+              <h1>Build your interview context.</h1>
+              <p>Your resume powers personalized questions and adaptive follow-ups. Keep it current so the AI
+                interviewer can challenge you on the right things.</p>
+            </div>
+            <div class="actions"><button class="btn btn-primary"
+                onclick="document.getElementById('resumeFile').click()">Upload resume</button></div>
+          </div>
+          <div class="grid cols-2">
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Resume</div>
+                  <div class="muted" id="resumeStatus">No new upload</div>
+                </div><span>PDF / DOCX</span>
+              </div>
+              <div class="upload empty-state" onclick="document.getElementById('resumeFile').click()">
+                <div class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M12 16V4m0 0L8 8m4-4 4 4M5 14v5h14v-5" />
+                  </svg></div>
+                <h3>Bring your latest resume</h3>
+                <p>Upload a PDF or document to refresh your candidate profile.</p><button class="btn btn-secondary"
+                  type="button">Choose file</button><input class="file-input" id="resumeFile" type="file"
+                  accept=".pdf,.doc,.docx,.txt" onchange="handleResume(this)">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Extracted profile</div>
+                  <div class="muted">Editable context for your AI interviewer</div>
+                </div><span class="tag-success"><span id="profileComplete">—</span> complete</span>
+              </div>
+              <div class="metric-grid">
+                <div class="metric"><b>Software</b><span>Target role</span></div>
+                <div class="metric"><b>7</b><span>Skills detected</span></div>
+                <div class="metric"><b>4</b><span>Projects</span></div>
+              </div>
+              <div style="margin-top:15px"><label class="muted">Target role</label><select id="role"
+                  style="width:100%;margin-top:6px;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)">
+                  <option>Software Engineer</option>
+                  <option>ML Engineer</option>
+                  <option>Data Analyst</option>
+                  <option>Product Engineer</option>
+                </select></div>
+              <div style="margin-top:15px"><label class="muted">Skills</label>
+                <div class="chips" style="margin-top:7px"><span class="chip">Java</span><span
+                    class="chip">DSA</span><span class="chip">React</span><span class="chip">Node.js</span><span
+                    class="chip">Python</span><span class="chip">SQL</span><span class="chip">Machine Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="pm-structure-card card">
+          <div class="pm-structure-head">
+            <div><span class="pm-eyebrow">Recommended next</span>
+              <h2>Resume improvements</h2>
+              <p>Small edits that make your profile easier for an interviewer to understand.</p>
+            </div><span class="tag-success">4 suggestions</span>
+          </div>
+          <div class="list">
+            <div class="list-row">
+              <div class="dot"></div>
+              <div><strong>Show project outcomes</strong><small>Add a measurable result to each major project.</small>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="dot"></div>
+              <div><strong>Lead with strong verbs</strong><small>Use built, improved, delivered, or designed.</small>
+              </div>
+            </div>
+            <div class="list-row">
+              <div class="dot"></div>
+              <div><strong>Clarify your ownership</strong><small>Separate your contribution from the team's
+                  work.</small></div>
+            </div>
+            <div class="list-row">
+              <div class="dot"></div>
+              <div><strong>Add relevant coursework</strong><small>Include two or three role-aligned subjects.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="view" id="interview">
+          <div class="hero">
+            <div>
+              <div class="eyebrow">AI interviewer</div>
+              <h1>Practice like the real thing.</h1>
+              <p id="interviewIntro">Questions adapt to your role, resume, projects and previous answers.</p>
+            </div>
+            <div class="actions"><button class="btn btn-secondary" onclick="resetInterview()">New session</button></div>
+          </div>
+          <div class="interview-shell">
+            <aside class="session-card">
+              <h3>Session plan</h3>
+              <div class="session-meta"><span>Target role</span><strong id="sideRole">Software Engineer</strong></div>
+              <div class="session-meta"><span>Interview type</span><strong>Mixed technical + behavioral</strong></div>
+              <div class="session-meta"><span>Difficulty</span><strong>Adaptive</strong></div>
+              <div class="session-meta"><span>Questions</span><strong id="sideQ">1 of 6</strong></div>
+              <div style="margin-top:18px">
+                <div class="muted">Session progress</div>
+                <div class="progress" style="margin-top:7px"><i id="sessionProgress" style="width:16%"></i></div>
+              </div>
+              <div style="margin-top:18px" class="mini-card">
+                <p>Coach hint</p><strong id="hint">Answer with context → action → measurable result.</strong>
+              </div>
+            </aside>
+            <div class="question-panel">
+              <div class="q-top"><span class="q-number" id="qNumber">QUESTION 01</span>
+                <div class="timer-wrap" aria-label="Interview time remaining"><span class="timer-ring"
+                    aria-hidden="true"><i></i></span><span class="timer" id="timer" aria-live="off"
+                    aria-describedby="timerAnnouncement">02:00</span><span id="timerAnnouncement"
+                    class="timer-announcement" aria-live="polite"></span></div>
+              </div>
+              <div class="question" id="question">Tell me about yourself and what makes you a strong fit for a Software
+                Engineer role.</div>
+              <div class="answer-meta"><span id="answerGuidance">Take a breath. Be specific about what you did and what
+                  changed because of it.</span><strong><span id="wordCount">0</span> words</strong></div><textarea
+                class="answer" id="answer" aria-label="Interview answer"
+                placeholder="Type your answer here, or use the microphone to practice speaking..."></textarea>
+              <div class="interview-footer">
+                <div class="mic"><button id="micBtn" aria-label="Use microphone for answer"
+                    onclick="toggleMic()">●</button><span class="muted" id="micLabel">Use microphone</span></div>
+                <div class="actions"><button class="btn btn-secondary" onclick="showToast('Answer saved locally')">Save
+                    draft</button><button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Submit &
+                    continue →</button></div>
+              </div>
+              <div class="feedback-card" id="feedbackCard" aria-live="polite" hidden>
+                <div class="feedback-score"><span>Latest evaluation</span><strong id="feedbackScore">—</strong></div>
+                <div class="feedback-grid">
+                  <div><span>Clarity</span><strong id="feedbackClarity">—</strong></div>
+                  <div><span>Structure</span><strong id="feedbackStructure">—</strong></div>
+                  <div><span>Relevance</span><strong id="feedbackRelevance">—</strong></div>
+                </div>
+                <div class="feedback-grid" style="margin-top:10px">
+                  <div><span>Strength</span><strong id="feedbackStrength">Clear response</strong></div>
+                  <div><span>One next step</span><strong id="feedbackImprovement">Add measurable impact.</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="grooming">
+          <div class="hero">
+            <div>
+              <div class="eyebrow">Multimodal presentation</div>
+              <h1>Show up professionally.</h1>
+              <p>Upload a photo or use your camera for job-relevant presentation feedback: framing, lighting, posture,
+                eye-line and movement.</p>
+            </div>
+            <div class="actions"><button class="btn btn-primary" onclick="openCamera()">Use camera</button></div>
+          </div>
+          <div class="coach-grid">
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Presentation preview</div>
+                  <div class="muted">Your photo/video stays in this prototype</div>
+                </div><button class="btn btn-secondary"
+                  onclick="document.getElementById('photoFile').click()">Upload</button>
+              </div><img id="photoPreview" class="preview-img" alt="Presentation preview"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='560' viewBox='0 0 900 560'%3E%3Crect width='900' height='560' fill='%23121827'/%3E%3Ccircle cx='450' cy='205' r='75' fill='%23343c58'/%3E%3Cpath d='M300 470c15-100 285-100 300 0' fill='%23343c58'/%3E%3Ctext x='450' y='520' fill='%2398a2b3' font-family='Arial' font-size='20' text-anchor='middle'%3EUpload a photo to preview%3C/text%3E%3C/svg%3E"><input
+                id="photoFile" class="file-input" type="file" accept="image/*" onchange="handlePhoto(this)">
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">AI presentation checklist</div>
+                  <div class="muted">Actionable, observable signals</div>
+                </div><span class="tag-success"><span id="checkScore">0</span> / 100</span>
+              </div>
+              <div class="suggestion">
+                <div class="check">✓</div>
+                <div><strong>Camera framing</strong>
+                  <p>Keep your face and upper shoulders centered with a little headroom.</p>
+                </div>
+              </div>
+              <div class="suggestion">
+                <div class="check">✓</div>
+                <div><strong>Lighting</strong>
+                  <p>Use a front-facing light source and avoid a bright window directly behind you.</p>
+                </div>
+              </div>
+              <div class="suggestion">
+                <div class="check">✓</div>
+                <div><strong>Posture</strong>
+                  <p>Keep shoulders relaxed and sit upright; avoid repeated leaning toward the screen.</p>
+                </div>
+              </div>
+              <div class="suggestion">
+                <div class="check">✓</div>
+                <div><strong>Eye-line</strong>
+                  <p>Place the interview window near your camera so your gaze reads naturally.</p>
+                </div>
+              </div>
+              <div class="suggestion">
+                <div class="check">✓</div>
+                <div><strong>Movement</strong>
+                  <p>Use purposeful gestures and reduce repetitive hand or body movement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height:16px"></div>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <div class="card-title">Pre-interview checklist</div>
+                <div class="muted">2-minute setup</div>
+              </div><button class="btn btn-soft" type="button" onclick="markAllReady()">Mark all ready</button>
+            </div>
+            <div class="quick checklist-grid" style="grid-template-columns:repeat(5,1fr)"><button type="button"
+                data-check="lighting" aria-pressed="false" onclick="runCheck('lighting')"><span
+                  class="check-number">01</span><b>Lighting</b><span>Face the light</span></button><button type="button"
+                data-check="framing" aria-pressed="false" onclick="runCheck('framing')"><span
+                  class="check-number">02</span><b>Framing</b><span>Head & shoulders</span></button><button
+                type="button" data-check="audio" aria-pressed="false" onclick="runCheck('audio')"><span
+                  class="check-number">03</span><b>Audio</b><span>Clear input</span></button><button type="button"
+                data-check="background" aria-pressed="false" onclick="runCheck('background')"><span
+                  class="check-number">04</span><b>Background</b><span>Clean & simple</span></button><button
+                type="button" data-check="eyeline" aria-pressed="false" onclick="runCheck('eyeline')"><span
+                  class="check-number">05</span><b>Eye-line</b><span>Near the lens</span></button></div>
+          </div>
+        </section>
+
+        <section class="view" id="progress">
+          <div class="prototype-banner" role="note"><span class="prototype-mark" aria-hidden="true"></span>
+            <div><strong>Prototype analytics.</strong> Trend lines, milestones and score breakdowns are illustrative
+              until connected to validated session data.</div>
+          </div>
+          <div class="hero">
+            <div>
+              <div class="eyebrow">Performance analytics</div>
+              <h1>See your improvement.</h1>
+              <p>Compare sessions and focus your preparation on the skills that move your readiness score.</p>
+            </div>
+          </div>
+          <div class="card progress-story">
+            <div class="card-head">
+              <div>
+                <div class="card-title">Your readiness story</div>
+                <div class="muted">Six recent sessions · steady upward trend</div>
+              </div><span class="tag-success">+14 pts</span>
+            </div>
+            <div class="trend-wrap"><svg viewBox="0 0 760 180" role="img"
+                aria-label="Readiness trend rising from 62 to 76">
+                <path class="trend-grid" d="M0 150H760M0 105H760M0 60H760" />
+                <path class="trend-line"
+                  d="M12 142 C90 134,115 130,170 126 S260 113,320 108 S420 96,470 86 S560 72,620 58 S700 45,748 35" />
+                <circle cx="748" cy="35" r="5" />
+              </svg>
+              <div class="trend-labels"><span>Session 1</span><span>Session 3</span><span>Session 6</span></div>
+            </div>
+            <div class="milestones">
+              <div><strong>62</strong><span>Starting point</span></div>
+              <div><strong>70</strong><span>Consistency</span></div>
+              <div><strong>76</strong><span>Current</span></div>
+              <div><strong>85</strong><span>Next milestone</span></div>
+            </div>
+            <div class="weekly-summary"><strong>This week</strong><span>3 sessions · +6 readiness points · communication
+                is the highest-impact focus.</span></div>
+          </div>
+          <div style="height:16px"></div>
+          <div class="grid cols-2">
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Latest score breakdown</div>
+                  <div class="muted">Based on your most recent mock interview</div>
+                </div><span class="tag-success">76 / 100</span>
+              </div>
+              <div class="score-row"><label>Technical / role knowledge</label>
+                <div class="track"><i style="width:82%"></i></div><strong>82</strong>
+              </div>
+              <div class="score-row"><label>Answer quality</label>
+                <div class="track"><i style="width:79%"></i></div><strong>79</strong>
+              </div>
+              <div class="score-row"><label>Communication</label>
+                <div class="track"><i style="width:71%"></i></div><strong>71</strong>
+              </div>
+              <div class="score-row"><label>Speech fluency</label>
+                <div class="track"><i style="width:73%"></i></div><strong>73</strong>
+              </div>
+              <div class="score-row"><label>Professional presentation</label>
+                <div class="track"><i style="width:81%"></i></div><strong>81</strong>
+              </div>
+              <div class="score-row"><label>Grooming readiness</label>
+                <div class="track"><i style="width:78%"></i></div><strong>78</strong>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <div class="card-title">Coach notes</div>
+                  <div class="muted">What to do next</div>
+                </div><span>Focus</span>
+              </div>
+              <div class="timeline">
+                <div class="event"><strong>Improve answer structure</strong>
+                  <p>Use STAR for behavioral prompts and quantify outcomes whenever possible.</p>
+                </div>
+                <div class="event"><strong>Practice speaking pace</strong>
+                  <p>Slow down slightly at transitions and replace filler words with short pauses.</p>
+                </div>
+                <div class="event"><strong>Repeat presentation check</strong>
+                  <p>Run the camera checklist before your next recorded practice.</p>
+                </div>
+                <div class="event"><strong>Retake in 3 days</strong>
+                  <p>Compare your communication score after two focused sessions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height:16px"></div>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <div class="card-title">Session history</div>
+                <div class="muted">Your measurable improvement</div>
+              </div><button class="btn btn-secondary" onclick="exportCsv()">Export</button>
+            </div>
+            <div class="list">
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>Software Engineer · Mixed</strong><small>Today · 12 questions · Communication focus</small>
+                </div>
+                <div class="row-right"><span class="score-pill">76</span></div>
+              </div>
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>Software Engineer · Behavioral</strong><small>Oct 05 · 8 questions</small></div>
+                <div class="row-right"><span class="score-pill">72</span></div>
+              </div>
+              <div class="list-row">
+                <div class="dot"></div>
+                <div><strong>Software Engineer · Technical</strong><small>Oct 02 · 10 questions</small></div>
+                <div class="row-right"><span class="score-pill">69</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="settings">
+          <div class="hero">
+            <div>
+              <div class="eyebrow">Workspace</div>
+              <h1>Settings</h1>
+              <p>Control your interview preferences and practice experience.</p>
+            </div>
+          </div>
+          <div class="card settings">
+            <div class="locale-row">
+              <div><strong>Language direction</strong>
+                <div class="muted">English ships by default. Switch direction to validate RTL layout behavior.</div>
+              </div>
+              <div class="locale-actions"><button class="btn btn-soft" type="button"
+                  onclick="setLocale('en')">English</button><button class="btn btn-secondary" type="button"
+                  onclick="setLocale('hi')">हिन्दी</button><button class="btn btn-secondary" type="button"
+                  onclick="setDirection('rtl')">RTL test</button></div>
+            </div>
+            <div class="setting">
+              <div><strong>Biometric sign-in</strong>
+                <div class="muted">Use fingerprint or Windows Hello for faster, secure PrepMate login.</div>
+              </div><button class="toggle" type="button" role="switch" aria-checked="true"
+                aria-label="Toggle biometric sign-in"><i></i></button>
+            </div>
+            <div class="setting">
+              <div><strong>Adaptive follow-ups</strong>
+                <div class="muted">Let the interviewer generate follow-ups from your previous answers.</div>
+              </div><button class="toggle" type="button" role="switch" aria-checked="true"
+                aria-label="Toggle adaptive follow-ups"><i></i></button>
+            </div>
+            <div class="setting">
+              <div><strong>Speaking analytics</strong>
+                <div class="muted">Track pace, pauses, filler words and fluency during practice.</div>
+              </div><button class="toggle" type="button" role="switch" aria-checked="true"
+                aria-label="Toggle speaking analytics"><i></i></button>
+            </div>
+            <div class="setting">
+              <div><strong>Camera presentation coaching</strong>
+                <div class="muted">Evaluate framing, posture, eye-line and movement.</div>
+              </div><button class="toggle" type="button" role="switch" aria-checked="true"
+                aria-label="Toggle camera presentation coaching"><i></i></button>
+            </div>
+            <div class="setting">
+              <div><strong>Daily practice reminder</strong>
+                <div class="muted">Receive a lightweight reminder to complete your practice session.</div>
+              </div><button class="toggle" type="button" role="switch" aria-checked="true"
+                aria-label="Toggle daily practice reminder"><i></i></button>
+            </div>
+            <div class="pm-structure-card">
+              <div class="pm-structure-head">
+                <div><span class="pm-eyebrow">Privacy</span>
+                  <h2>Your practice stays private by design.</h2>
+                  <p>Photos and resume text are processed locally when possible, or sent securely only for the analysis
+                    you request.</p>
+                </div><span class="tag-success">Privacy-first</span>
+              </div>
+            </div>
+            <div class="pm-structure-card">
+              <div class="pm-structure-head">
+                <div><span class="pm-eyebrow">Accessibility</span>
+                  <h2>Device preferences</h2>
+                  <p>Reduced motion, contrast, text scaling, and keyboard navigation are applied automatically where
+                    supported.</p>
+                </div><span class="tag-success">Automatic</span>
+              </div>
+            </div>
+            <div class="pm-structure-card">
+              <div class="pm-structure-head">
+                <div><span class="pm-eyebrow">About</span>
+                  <h2>Calm confidence for your next interview.</h2>
+                  <p>AI-powered placement readiness coaching for engineering students.</p>
+                </div><span class="muted">Version 1.0</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="view" id="case-study">
+          <div class="pm-case">
+            <div class="pm-case-hero">
+              <div><span class="eyebrow">PrepMate · Product design</span>
+                <h1>Making interview preparation feel focused, private, and achievable.</h1>
+              </div>
+              <div class="pm-case-meta"><span>Case study status</span><strong>Design direction in
+                  progress</strong><small>Research and testing evidence can be added after validation.</small></div>
+            </div>
+            <section class="pm-case-section">
+              <div class="pm-case-label"><span>01</span><strong>Problem statement</strong></div>
+              <div>
+                <h2>Placement preparation can feel fragmented when practice, feedback, presentation, and progress live
+                  in separate tools.</h2>
+                <p>PrepMate brings these moments into one calm coaching experience, helping engineering students
+                  understand what to practise next without turning readiness into pressure.</p>
+              </div>
+            </section>
+            <section class="pm-case-section">
+              <div class="pm-case-label"><span>02</span><strong>Research summary</strong></div>
+              <div class="card"><span class="pm-eyebrow">Research placeholder</span>
+                <h2>Document interview themes, usability observations, and prioritised findings here.</h2>
+                <p>This section mirrors the product case-study structure from the supplied React/Vite project while
+                  keeping PrepMate's existing visual language and tokens.</p>
+              </div>
+            </section>
+            <section class="pm-case-section">
+              <div class="pm-case-label"><span>03</span><strong>Key flows</strong></div>
+              <div>
+                <h2>Four connected moments in the readiness journey.</h2>
+                <p>Each flow keeps one decision visually dominant and carries the student toward a clear next step.</p>
+                <div class="pm-case-grid">
+                  <article class="pm-case-flow"><span class="pm-eyebrow">01 · Practice</span>
+                    <h3>AI Interview</h3>
+                    <p>Role-aware questions with focused answer feedback.</p>
+                    <ol>
+                      <li>Set context</li>
+                      <li>Answer</li>
+                      <li>Review</li>
+                    </ol>
+                  </article>
+                  <article class="pm-case-flow"><span class="pm-eyebrow">02 · Present</span>
+                    <h3>Grooming Coach</h3>
+                    <p>Prepare camera, audio, framing, and eye-line.</p>
+                    <ol>
+                      <li>Check setup</li>
+                      <li>Run coaching</li>
+                      <li>Ready</li>
+                    </ol>
+                  </article>
+                  <article class="pm-case-flow"><span class="pm-eyebrow">03 · Context</span>
+                    <h3>Resume Profile</h3>
+                    <p>Keep role and skill context current for coaching.</p>
+                    <ol>
+                      <li>Upload</li>
+                      <li>Analyse</li>
+                      <li>Refine</li>
+                    </ol>
+                  </article>
+                  <article class="pm-case-flow"><span class="pm-eyebrow">04 · Improve</span>
+                    <h3>Progress</h3>
+                    <p>Turn sessions into a visible readiness story.</p>
+                    <ol>
+                      <li>Compare</li>
+                      <li>Focus</li>
+                      <li>Practise again</li>
+                    </ol>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <section class="pm-case-section">
+              <div class="pm-case-label"><span>04</span><strong>Before and after</strong></div>
+              <div>
+                <h2>From utility-first modules to a guided coaching hierarchy.</h2>
+                <p>PrepMate keeps the existing theme while making the product journey more explicit: readiness first,
+                  one leading action, then supporting detail.</p>
+                <div class="pm-case-audit">
+                  <article><strong>Before</strong>
+                    <p>Multiple equal-weight modules compete for attention.</p>
+                  </article>
+                  <article><strong>After</strong>
+                    <p>One readiness narrative and one next action lead each screen.</p>
+                  </article>
+                  <article><strong>System</strong>
+                    <p>Shared semantic tokens keep the experience consistent across every page.</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <section class="pm-case-section">
+              <div class="pm-case-label"><span>05</span><strong>Accessibility</strong></div>
+              <div>
+                <h2>Accessibility is part of the system.</h2>
+                <p>Visible focus states, semantic landmarks, keyboard-operable controls, responsive layouts, and
+                  reduced-motion handling remain part of the PrepMate foundation.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+    </div>
+    </main>
   </div>
-  <div class="grid cols-2 dashboard-lead">
-    <div class="card readiness-hero"><div class="card-head"><div><div class="card-title">Readiness score</div><div class="muted">Your latest multimodal assessment</div></div><button class="btn btn-soft" onclick="navigate('progress')">View details</button></div><div class="score-layout"><div class="ring" data-score="76" aria-label="Readiness score 76 out of 100"><span>76</span><small>READINESS</small></div><div class="score-copy"><div class="score-kicker">ON TRACK</div><h3>Strong foundation</h3><p>You’re strong on role knowledge and presentation. The fastest gains now come from clearer answers and steadier speech.</p><div class="chips"><span class="chip">Technical 82</span><span class="chip">Answer 79</span><span class="chip">Speech 73</span><span class="chip">Presentation 81</span></div><button class="btn btn-primary score-next" onclick="startInterview()">Next best action&nbsp; · &nbsp;practice communication</button></div></div></div>
-    <div class="card"><div class="card-head"><div><div class="card-title">This week's focus</div><div class="muted">Recommended by your coach</div></div><span>✦</span></div><div class="list"><div class="list-row"><div class="dot"></div><div><strong>Reduce filler words</strong><small>Target: &lt; 3 per minute</small></div><div class="row-right"><span class="score-pill">High impact</span></div></div><div class="list-row"><div class="dot"></div><div><strong>Structure behavioral answers</strong><small>Use the STAR framework</small></div><div class="row-right"><span class="score-pill">Practice</span></div></div><div class="list-row"><div class="dot"></div><div><strong>Camera eye-line</strong><small>Keep gaze near the lens</small></div><div class="row-right"><span class="score-pill">Quick win</span></div></div></div></div></div>
   </div>
-  <div style="height:16px"></div>
-  <div class="grid cols-2"><div class="card"><div class="card-head"><div><div class="card-title">Progress over time</div><div class="muted">Overall score by session</div></div><span class="tag-success">+14 pts</span></div><div class="chart"><div class="bars"><div class="bar-group"><div class="bar" style="height:61%"></div></div><div class="bar-group"><div class="bar" style="height:66%"></div></div><div class="bar-group"><div class="bar" style="height:69%"></div></div><div class="bar-group"><div class="bar" style="height:72%"></div></div><div class="bar-group"><div class="bar" style="height:76%"></div></div><div class="bar-group"><div class="bar" style="height:82%"></div></div></div><div class="labels"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span></div></div></div><div class="card"><div class="card-head"><div><div class="card-title">Latest session</div><div class="muted">Software Engineer · Behavioral</div></div><span class="tag-success">76 / 100</span></div><div class="list"><div class="list-row"><div class="dot"></div><div><strong>“Tell me about a difficult project.”</strong><small>Answer quality · 84</small></div></div><div class="list-row"><div class="dot"></div><div><strong>“Why should we hire you?”</strong><small>Answer quality · 77</small></div></div><div class="list-row"><div class="dot"></div><div><strong>“Tell me about a conflict.”</strong><small>Answer quality · 70</small></div></div></div><button class="btn btn-secondary" style="width:100%;margin-top:12px" onclick="navigate('interview')">Continue practicing</button></div></div>
-  <div style="height:16px"></div><div class="quick"><button onclick="startInterview()"><span>◉</span><b>AI Mock Interview</b><span>Adaptive questions from your profile</span></button><button onclick="navigate('grooming')"><span>✦</span><b>Grooming Coach</b><span>Camera, posture & presentation</span></button><button onclick="navigate('resume')"><span>▤</span><b>Resume Profile</b><span>Keep your AI context fresh</span></button><button onclick="generatePracticePlan()"><span>✓</span><b>Daily practice</b><span>12 minutes · Communication</span></button></div>
-  <div class="pm-plan-grid pm-structure-card">
-   <article class="card"><div class="pm-structure-head"><div><span class="pm-eyebrow">Today’s plan</span><h2>25 minutes of focused practice</h2><p>Three small steps, ordered around your current communication focus.</p></div><span class="tag-success">25 min</span></div><ol class="pm-plan-list"><li><span>1</span><span><strong>Warm up your introduction</strong><small>Build a clear 60-second answer.</small></span><time>5 min</time></li><li><span>2</span><span><strong>Explain your final-year project</strong><small>Use problem, decision, and result.</small></span><time>12 min</time></li><li><span>3</span><span><strong>Review communication feedback</strong><small>Focus on pace and concision.</small></span><time>8 min</time></li></ol><div class="actions" style="margin-top:14px"><button class="btn btn-primary" onclick="startInterview()">Start practice →</button><button class="btn btn-secondary" onclick="showToast('Practice plan kept for today')">Keep plan</button></div></article>
-   <article class="card"><div class="pm-structure-head"><div><span class="pm-eyebrow">Current focus</span><h2>Give your ideas more room to land.</h2></div></div><div class="pm-focus-box"><strong>Speech fluency · 73</strong><p>Slow slightly at transitions and replace filler words with short pauses so strong technical ideas feel more deliberate.</p><button class="btn btn-soft" onclick="navigate('progress')">View progress →</button></div></article>
+  <canvas id="dotNetworkCanvas" aria-hidden="true"></canvas>
+  <div id="dotNetworkControls"><button id="dotNetworkClear" type="button"
+      aria-label="Clear background network links">Clear links</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-back" id="cameraModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cameraTitle">
+      <div class="modal-head">
+        <h3 id="cameraTitle">Camera check</h3><button class="close" aria-label="Close camera dialog"
+          onclick="closeCamera()">×</button>
+      </div>
+      <div class="camera"><video id="video" autoplay muted playsinline></video><span id="cameraFallback"
+          class="muted">Camera preview</span></div>
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:14px"><button class="btn btn-secondary"
+          onclick="closeCamera()">Cancel</button><button class="btn btn-primary" onclick="capturePhoto()">Use this
+          frame</button></div>
+    </div>
   </div>
 </section>
 
@@ -635,4 +1649,5 @@ checkBackend();checkSupabase().then(ok=>{if(ok){console.info('PrepMate Supabase 
 </script>
 <script src="features.js" defer></script>
 </body>
+
 </html>
