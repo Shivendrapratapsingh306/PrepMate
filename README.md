@@ -1,5 +1,9 @@
 # PrepMate — Integrated Warm Study Edition
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_PrepMate-brightgreen?style=for-the-badge)](https://elevateai-placement-coach.vercel.app)
+
+> **🔗 Live Demo:** [https://elevateai-placement-coach.vercel.app](https://elevateai-placement-coach.vercel.app)
+
 This package updates the existing single-file PrepMate application, preserving its navigation, Supabase hooks, and Vercel API routes while applying the supplied Warm Study / Forest palette and the feature layer.
 
 ## Run locally
